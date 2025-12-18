@@ -1,0 +1,62 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="CustomTableBuilder.js" />
+	<help file="CustomTableBuilder.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Custom Tables Builder">
+		<row id="row_vLLRSVCGNW">
+			<varselector id="ct_selector" />
+			<column id="clm_tLLRSVCGNW">
+				<tabbook>
+					<tab label="Layout" id="tab_Layout">
+						<column id="clm_vRSVCGNWVO">
+							<varslot id="ct_rows" label="Rows (Stacked Variables)" source="ct_selector" required="true" multi="true" />
+							<varslot id="ct_cols" label="Columns (Grouping/Nesting)" source="ct_selector" multi="true" />
+							<varslot id="ct_weight" label="Weight Variable (Optional)" source="ct_selector" classes="numeric" />
+						</column>
+					</tab>
+					<tab label="Statistics" id="tab_Statstcs">
+						<column id="clm_cSSCC1CP1R">
+							<column id="clm_tSSCC1CP1R">
+								<text id="txt_Slctstts">
+									Select statistics to calculate:
+								</text>
+								<checkbox id="stat_cases" label="Counts (Cases)" value="1" />
+								<checkbox id="stat_cpct" label="Column Percent %" value="1" checked="true" />
+								<checkbox id="stat_rpct" label="Row Percent %" value="1" />
+								<stretch />
+							</column>
+						</column>
+					</tab>
+					<tab label="Options" id="tab_Options">
+						<column id="clm_iLTTTPBLTA">
+							<input label="Label for Total column" id="ct_total_lbl" initial="Total" />
+							<dropdown id="ct_pos_total" label="Total Position">
+								<option label="Before (Left/Top)" value="before" />
+								<option label="After (Right/Bottom)" value="after" checked="true" />
+								<option label="None" value="none" />
+							</dropdown>
+							<saveobject label="Save table as" checkable="true" initial="custom_table" id="ct_save_obj" />
+							<preview label="Preview" id="prv_Preview" mode="data" />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

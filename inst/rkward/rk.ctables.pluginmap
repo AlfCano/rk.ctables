@@ -1,0 +1,77 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="CustomTableBuilder"
+	id="CustomTableBuilder_rkward"
+	po_id="CustomTableBuilder_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.ctables"
+		shortinfo="An RKWard plugin package for creating SPSS-style Custom Tables (Stacking and Nesting) using the 'expss' library."
+		longinfo="An RKWard plugin package for creating SPSS-style Custom Tables (Stacking and Nesting) using the 'expss' library."
+		version="0.0.1"
+		releasedate="2025-12-18"
+		url="https://github.com/AlfCano/rk.ctables"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_CustomTablBldrCstmTblBldr"
+			label="Custom Table Builder"
+			type="standard"
+			file="plugins/CustomTableBuilder.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="CustomTablesexpss"
+				label="Custom Tables (expss)"
+			>
+				<entry
+					component="cmp_CustomTablBldrCstmTblBldr"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>
