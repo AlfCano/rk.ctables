@@ -1,14 +1,10 @@
 # rk.ctables: Custom Tables for RKWard
 
-
-![Version](https://img.shields.io/badge/Version-0.0.2-blue.svg)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![RKWard](https://img.shields.io/badge/Platform-RKWard-green)
-[![R Linter](https://github.com/AlfCano/rk.ctables
-/actions/workflows/lintr.yml/badge.svg)](https://github.com/AlfCano/rk.ctables
-/actions/workflows/lintr.yml)
-![AI Gemini](https://img.shields.io/badge/AI-Gemini-4285F4?logo=googlegemini&logoColor=white)
-
+![Version](https://img.shields.io/badge/Version-0.0.1-blue.svg)
+![License](https://img.shields.io/badge/License-GPL--3-green.svg)
+![R Version](https://img.shields.io/badge/R-%3E%3D%203.0.0-lightgrey.svg)
+[![R Linter](https://github.com/AlfCano/rk.ctables/actions/workflows/lintr.yml/badge.svg)](https://github.com/AlfCano/rk.ctables/actions/workflows/lintr.yml)
+![AI Assistance](https://img.shields.io/badge/Created%20with-Gemini-4E86F8)
 
 ## Features
 
@@ -18,17 +14,6 @@
 *   **Statistics:** Easily toggle Counts, Column Percentages, and Row Percentages.
 *   **Total Control:** Configure the label and position (Top/Bottom/None) of Total rows/columns.
 *   **Output:** Generates formatted HTML tables directly in the RKWard output window.
-
-## 🌍 Internationalization
-
-The interface is fully localized to match your RKWard language settings:
-
-*   🇺🇸 **English** (Default)
-*   🇪🇸 **Spanish** (`es`)
-*   🇫🇷 **French** (`fr`)
-*   🇩🇪 **German** (`de`)
-*   🇧🇷 **Portuguese** (Brazil) (`pt_BR`)
-
 
 ## Requirements
 
@@ -59,6 +44,8 @@ rk.header ("Resultados de Instalar desde git")
 ## Usage & Examples
 
 The plugin relies on **Variable Labels** to produce professional tables (just like SPSS). Without labels, the table will show raw variable names (e.g., `sex`) instead of "Gender".
+
+![Screenshot of the path in the main menu.](screenshots/example1.png){width=30%}
 
 ### Step 0: Prepare Data (Penguins)
 Copy and run this code in your RKWard console to load the `penguins` dataset and apply labels:
@@ -96,6 +83,10 @@ Compare groups side-by-side.
 3.  **Statistics:** Check **Column Percent %**.
 4.  Click **Submit**.
     *   *Result:* A standard crosstab showing Species distribution broken down by Gender.
+    
+ ![Screenshot of the RKWard interface showing the main menu of rk.ctables, highlighting the selection of row and column variables and the layer configuration.](screenshots/example2_1.png){width=90%}   
+ 
+ ![Screenshot of the HTML output device, showing the rendered contingency table along with the stratified percentages and the footnote with the result of the Chi-square test.](screenshots/example2_2.png){width=60%}
 
 ### Example 3: Complex Nesting (Hierarchical Columns)
 Create a highly detailed table by nesting grouping variables.

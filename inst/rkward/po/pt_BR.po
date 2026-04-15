@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.ctables 0.0.1\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-03-23 12:35-0600\n"
+"PO-Revision-Date: 2026-03-23 12:35-0600\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Custom Tables (expss)"
+msgstr "Tabelas Personalizadas (expss)"
+
+msgid "Custom Tables Builder"
+msgstr "Construtor de Tabelas Personalizadas"
+
+msgid "Custom Tables (SPSS Style)"
+msgstr "Tabelas Personalizadas (Estilo SPSS)"
+
+msgid "Create complex hierarchical tables with stacking and nesting logic using 'expss'. equivalent to SPSS CTABLES."
+msgstr "Crie tabelas hierárquicas complexas com lógica de empilhamento e aninhamento usando 'expss'. Equivalente ao SPSS CTABLES."
+
+msgid "Select Row variables (Stacked) and Column variables (Nested). Apply weights and select statistics."
+msgstr "Selecione variáveis de Linha (Empilhadas) e variáveis de Coluna (Aninhadas). Aplique pesos e selecione estatísticas."
+
+msgid "Layout"
+msgstr "Layout"
+
+msgid "Rows (Stacked Variables)"
+msgstr "Linhas (Variáveis Empilhadas)"
+
+msgid "Columns (Grouping/Nesting)"
+msgstr "Colunas (Agrupamento/Aninhamento)"
+
+msgid "Weight Variable (Optional)"
+msgstr "Variável de Ponderação (Opcional)"
+
+msgid "Statistics"
+msgstr "Estatísticas"
+
+msgid "Select statistics to calculate:"
+msgstr "Selecione as estatísticas para calcular:"
+
+msgid "Counts (Cases)"
+msgstr "Contagens (Casos)"
+
+msgid "Column Percent %"
+msgstr "Porcentagem de Coluna %"
+
+msgid "Row Percent %"
+msgstr "Porcentagem de Linha %"
+
+msgid "Options"
+msgstr "Opções"
+
+msgid "Label for Total column"
+msgstr "Rótulo para a coluna Total"
+
+msgid "Total Position"
+msgstr "Posição do Total"
+
+msgid "Before (Left/Top)"
+msgstr "Antes (Esquerda/Topo)"
+
+msgid "After (Right/Bottom)"
+msgstr "Depois (Direita/Fundo)"
+
+msgid "None"
+msgstr "Nenhum"
+
+msgid "Save table as"
+msgstr "Salvar tabela como"

@@ -5,15 +5,15 @@ function preview(){
 	
     function parseVar(fullPath) {
         if (!fullPath) return {df: '', col: '', raw_col: ''};
-        
+
         var df = '';
         var raw_col = '';
-        
+
         if (fullPath.indexOf('[[') > -1) {
             var parts = fullPath.split('[[');
             df = parts[0];
             var inner = parts[1].replace(']]', '');
-            raw_col = inner.replace(/["']/g, ''); 
+            raw_col = inner.replace(/["']/g, '');
         } else if (fullPath.indexOf('$') > -1) {
             var parts = fullPath.split('$');
             df = parts[0];
@@ -21,37 +21,37 @@ function preview(){
         } else {
             raw_col = fullPath;
         }
-        return { 
-            df: df, 
-            col: '\"' + raw_col + '\"', 
-            raw_col: raw_col 
+        return {
+            df: df,
+            col: '\"' + raw_col + '\"',
+            raw_col: raw_col
         };
     }
   
     var rows = getValue("ct_rows");
     var cols = getValue("ct_cols");
     var weight = getValue("ct_weight");
-    
+
     // Stats
     var s_cases = getValue("stat_cases");
     var s_cpct = getValue("stat_cpct");
     var s_rpct = getValue("stat_rpct");
-    
+
     // Options
     var tot_lbl = getValue("ct_total_lbl");
     var tot_pos = getValue("ct_pos_total");
-    
+
     // 1. Parse Dataframe from Rows
     var varList = rows.split("\n");
     var dfName = "";
     var rowList = [];
-    
+
     for (var i = 0; i < varList.length; i++) {
         var p = parseVar(varList[i]);
         if (i === 0) dfName = p.df;
-        rowList.push(p.raw_col); 
+        rowList.push(p.raw_col);
     }
-    
+
     // 2. Parse Cols
     var colList = [];
     if (cols != "") {
@@ -60,22 +60,22 @@ function preview(){
             colList.push(parseVar(cList[i]).raw_col);
         }
     }
-    
+
     // 3. Start building expss chain
     if (dfName == "") {
         var cmd = "";
     } else {
         var cmd = dfName + " %>% ";
-        
+
         // 4. Tab Cells (Rows)
         cmd += "expss::tab_cells(" + rowList.join(", ") + ") %>% ";
-        
+
         // 5. Tab Cols (Columns/Nesting)
         var total_syntax = "expss::total(label = \"" + tot_lbl + "\")";
-        
+
         if (colList.length > 0) {
             var col_args = colList.join(", ");
-            
+
             if (tot_pos == "before") {
                 cmd += "expss::tab_cols(" + total_syntax + ", " + col_args + ") %>% ";
             } else if (tot_pos == "after") {
@@ -86,17 +86,17 @@ function preview(){
         } else {
              cmd += "expss::tab_cols(" + total_syntax + ") %>% ";
         }
-        
+
         // 6. Weight
         if (weight != "") {
             cmd += "expss::tab_weight(" + weight + ") %>% ";
         }
-        
+
         // 7. Statistics
         if (s_cases == "1") cmd += "expss::tab_stat_cases() %>% ";
         if (s_cpct == "1") cmd += "expss::tab_stat_cpct() %>% ";
         if (s_rpct == "1") cmd += "expss::tab_stat_rpct() %>% ";
-        
+
         // 8. Finalize
         cmd += "expss::tab_pivot()";
     }
@@ -123,15 +123,15 @@ function calculate(is_preview){
 
     function parseVar(fullPath) {
         if (!fullPath) return {df: '', col: '', raw_col: ''};
-        
+
         var df = '';
         var raw_col = '';
-        
+
         if (fullPath.indexOf('[[') > -1) {
             var parts = fullPath.split('[[');
             df = parts[0];
             var inner = parts[1].replace(']]', '');
-            raw_col = inner.replace(/["']/g, ''); 
+            raw_col = inner.replace(/["']/g, '');
         } else if (fullPath.indexOf('$') > -1) {
             var parts = fullPath.split('$');
             df = parts[0];
@@ -139,37 +139,37 @@ function calculate(is_preview){
         } else {
             raw_col = fullPath;
         }
-        return { 
-            df: df, 
-            col: '\"' + raw_col + '\"', 
-            raw_col: raw_col 
+        return {
+            df: df,
+            col: '\"' + raw_col + '\"',
+            raw_col: raw_col
         };
     }
   
     var rows = getValue("ct_rows");
     var cols = getValue("ct_cols");
     var weight = getValue("ct_weight");
-    
+
     // Stats
     var s_cases = getValue("stat_cases");
     var s_cpct = getValue("stat_cpct");
     var s_rpct = getValue("stat_rpct");
-    
+
     // Options
     var tot_lbl = getValue("ct_total_lbl");
     var tot_pos = getValue("ct_pos_total");
-    
+
     // 1. Parse Dataframe from Rows
     var varList = rows.split("\n");
     var dfName = "";
     var rowList = [];
-    
+
     for (var i = 0; i < varList.length; i++) {
         var p = parseVar(varList[i]);
         if (i === 0) dfName = p.df;
-        rowList.push(p.raw_col); 
+        rowList.push(p.raw_col);
     }
-    
+
     // 2. Parse Cols
     var colList = [];
     if (cols != "") {
@@ -178,22 +178,22 @@ function calculate(is_preview){
             colList.push(parseVar(cList[i]).raw_col);
         }
     }
-    
+
     // 3. Start building expss chain
     if (dfName == "") {
         var cmd = "";
     } else {
         var cmd = dfName + " %>% ";
-        
+
         // 4. Tab Cells (Rows)
         cmd += "expss::tab_cells(" + rowList.join(", ") + ") %>% ";
-        
+
         // 5. Tab Cols (Columns/Nesting)
         var total_syntax = "expss::total(label = \"" + tot_lbl + "\")";
-        
+
         if (colList.length > 0) {
             var col_args = colList.join(", ");
-            
+
             if (tot_pos == "before") {
                 cmd += "expss::tab_cols(" + total_syntax + ", " + col_args + ") %>% ";
             } else if (tot_pos == "after") {
@@ -204,17 +204,17 @@ function calculate(is_preview){
         } else {
              cmd += "expss::tab_cols(" + total_syntax + ") %>% ";
         }
-        
+
         // 6. Weight
         if (weight != "") {
             cmd += "expss::tab_weight(" + weight + ") %>% ";
         }
-        
+
         // 7. Statistics
         if (s_cases == "1") cmd += "expss::tab_stat_cases() %>% ";
         if (s_cpct == "1") cmd += "expss::tab_stat_cpct() %>% ";
         if (s_rpct == "1") cmd += "expss::tab_stat_rpct() %>% ";
-        
+
         // 8. Finalize
         cmd += "expss::tab_pivot()";
     }

@@ -20,8 +20,8 @@
 		name="rk.ctables"
 		shortinfo="An RKWard plugin package for creating SPSS-style Custom Tables (Stacking and Nesting) using the 'expss' library."
 		longinfo="An RKWard plugin package for creating SPSS-style Custom Tables (Stacking and Nesting) using the 'expss' library."
-		version="0.0.1"
-		releasedate="2025-12-18"
+		version="0.0.2"
+		releasedate="2026-04-15"
 		url="https://github.com/AlfCano/rk.ctables"
 		license="GPL (&gt;= 3)"
 	>

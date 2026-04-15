@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.ctables 0.0.1\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-03-23 12:35-0600\n"
+"PO-Revision-Date: 2026-03-23 12:35-0600\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Custom Tables (expss)"
+msgstr "Benutzerdefinierte Tabellen (expss)"
+
+msgid "Custom Tables Builder"
+msgstr "Generator für Benutzerdefinierte Tabellen"
+
+msgid "Custom Tables (SPSS Style)"
+msgstr "Benutzerdefinierte Tabellen (SPSS-Stil)"
+
+msgid "Create complex hierarchical tables with stacking and nesting logic using 'expss'. equivalent to SPSS CTABLES."
+msgstr "Erstellen Sie komplexe hierarchische Tabellen mit Stapel- und Verschachtelungslogik unter Verwendung von 'expss'. Äquivalent zu SPSS CTABLES."
+
+msgid "Select Row variables (Stacked) and Column variables (Nested). Apply weights and select statistics."
+msgstr "Wählen Sie Zeilenvariablen (Gestapelt) und Spaltenvariablen (Verschachtelt). Wenden Sie Gewichtungen an und wählen Sie Statistiken aus."
+
+msgid "Layout"
+msgstr "Layout"
+
+msgid "Rows (Stacked Variables)"
+msgstr "Zeilen (Gestapelte Variablen)"
+
+msgid "Columns (Grouping/Nesting)"
+msgstr "Spalten (Gruppierung/Verschachtelung)"
+
+msgid "Weight Variable (Optional)"
+msgstr "Gewichtungsvariable (Optional)"
+
+msgid "Statistics"
+msgstr "Statistiken"
+
+msgid "Select statistics to calculate:"
+msgstr "Zu berechnende Statistiken auswählen:"
+
+msgid "Counts (Cases)"
+msgstr "Anzahlen (Fälle)"
+
+msgid "Column Percent %"
+msgstr "Spaltenprozent %"
+
+msgid "Row Percent %"
+msgstr "Zeilenprozent %"
+
+msgid "Options"
+msgstr "Optionen"
+
+msgid "Label for Total column"
+msgstr "Beschriftung für die Spalte 'Gesamt'"
+
+msgid "Total Position"
+msgstr "Position 'Gesamt'"
+
+msgid "Before (Left/Top)"
+msgstr "Davor (Links/Oben)"
+
+msgid "After (Right/Bottom)"
+msgstr "Danach (Rechts/Unten)"
+
+msgid "None"
+msgstr "Keine"
+
+msgid "Save table as"
+msgstr "Tabelle speichern als"
