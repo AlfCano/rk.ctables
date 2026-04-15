@@ -15,7 +15,7 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin package for creating SPSS-style Custom Tables (Stacking and Nesting) using the 'expss' library.",
-      version = "0.0.1",
+      version = "0.0.2", # FOR TRANSLATION FILES
       url = "https://github.com/AlfCano/rk.ctables",
       license = "GPL (>= 3)"
     )
